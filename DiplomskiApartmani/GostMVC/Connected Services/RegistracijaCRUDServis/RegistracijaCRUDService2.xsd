@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53563/RegistracijaCRUDService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" />
+  <xs:element name="novaRegistracija">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" minOccurs="0" name="noviGost" nillable="true" type="q1:GostDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="novaRegistracijaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="novaRegistracijaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uredivanjePodataka">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" minOccurs="0" name="gostZaUredivanje" nillable="true" type="q2:GostDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uredivanjePodatakaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uredivanjePodatakaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prijava">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sifra" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prijavaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" minOccurs="0" name="prijavaResult" nillable="true" type="q3:GostDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gostID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GostID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gostIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" minOccurs="0" name="gostIDResult" nillable="true" type="q4:GostDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

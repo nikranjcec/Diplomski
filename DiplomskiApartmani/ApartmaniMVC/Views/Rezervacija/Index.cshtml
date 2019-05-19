@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ApartmaniService.DTO.RezervacijaDTO>
+
+@{
+    ViewBag.Title = "Pregled rezervacija";
+}
+
+<h2>Pregled rezervacija</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ImeGosta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrezimeGosta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NazivApartmana)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Od)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Do)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImeGosta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrezimeGosta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NazivApartmana)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Od)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Do)
+        </td>
+
+        <td>
+            @Html.ActionLink("Potvrdi", "Potvrdi", new { rezervacijaID = item.RezervacijaID }) |
+            @Html.ActionLink("Odbi", "Odbi", new { rezervacijaID = item.RezervacijaID })
+        </td>
+    </tr>
+}
+
+</table>

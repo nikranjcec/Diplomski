@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53563/RezervacijeCRUDService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" />
+  <xs:element name="dohvatiNepotvrdeneRezervacije">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dohvatiNepotvrdeneRezervacijeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" minOccurs="0" name="dohvatiNepotvrdeneRezervacijeResult" nillable="true" type="q1:ArrayOfRezervacijaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dohvatiRezervacijeZaApartman">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="apartmanID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dohvatiRezervacijeZaApartmanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" minOccurs="0" name="dohvatiRezervacijeZaApartmanResult" nillable="true" type="q2:ArrayOfRezervacijaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dohvatiRezervacijeZaGosta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="gostID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dohvatiRezervacijeZaGostaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" minOccurs="0" name="dohvatiRezervacijeZaGostaResult" nillable="true" type="q3:ArrayOfRezervacijaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="kreirajNovuRezervaciju">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" minOccurs="0" name="novaRezervacija" nillable="true" type="q4:RezervacijaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="kreirajNovuRezervacijuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="kreirajNovuRezervacijuResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="promijeniStatusRezervacije">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rezervacijaID" type="xs:int" />
+        <xs:element minOccurs="0" name="status" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="promijeniStatusRezervacijeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="promijeniStatusRezervacijeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="provjeriDostupnost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" minOccurs="0" name="rezervacija" nillable="true" type="q5:RezervacijaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="provjeriDostupnostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="provjeriDostupnostResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

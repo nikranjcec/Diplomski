@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1ac4e2c3-fc75-476c-b3fb-890da45d12c2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53563/RegistracijaCRUDService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RegistracijaCRUDService.xsd" MetadataType="Schema" ID="51db70e3-8d0a-4a08-a19e-fbabec4525d6" SourceId="1" SourceUrl="http://localhost:53563/RegistracijaCRUDService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RegistracijaCRUDService.wsdl" MetadataType="Wsdl" ID="18ad21a1-0140-40f2-aca9-36cc5f3e9b88" SourceId="1" SourceUrl="http://localhost:53563/RegistracijaCRUDService.svc?wsdl" />
+    <MetadataFile FileName="RegistracijaCRUDService1.xsd" MetadataType="Schema" ID="a29e3d8a-dccc-4ab8-8615-48e5d090068e" SourceId="1" SourceUrl="http://localhost:53563/RegistracijaCRUDService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RegistracijaCRUDService.disco" MetadataType="Disco" ID="b18ec9b0-f897-4360-a9e0-eba89079c549" SourceId="1" SourceUrl="http://localhost:53563/RegistracijaCRUDService.svc?disco" />
+    <MetadataFile FileName="RegistracijaCRUDService2.xsd" MetadataType="Schema" ID="cb06ee38-93ff-42ee-876b-0a227a0582df" SourceId="1" SourceUrl="http://localhost:53563/RegistracijaCRUDService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

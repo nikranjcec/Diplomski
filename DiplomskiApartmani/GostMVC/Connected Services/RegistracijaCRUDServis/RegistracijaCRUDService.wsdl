@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RegistracijaCRUDService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53563/RegistracijaCRUDService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53563/RegistracijaCRUDService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53563/RegistracijaCRUDService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ApartmaniService.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRegistracijaCRUDService_novaRegistracija_InputMessage">
+    <wsdl:part name="parameters" element="tns:novaRegistracija" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaCRUDService_novaRegistracija_OutputMessage">
+    <wsdl:part name="parameters" element="tns:novaRegistracijaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaCRUDService_uredivanjePodataka_InputMessage">
+    <wsdl:part name="parameters" element="tns:uredivanjePodataka" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaCRUDService_uredivanjePodataka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uredivanjePodatakaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaCRUDService_prijava_InputMessage">
+    <wsdl:part name="parameters" element="tns:prijava" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaCRUDService_prijava_OutputMessage">
+    <wsdl:part name="parameters" element="tns:prijavaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaCRUDService_gostID_InputMessage">
+    <wsdl:part name="parameters" element="tns:gostID" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaCRUDService_gostID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gostIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRegistracijaCRUDService">
+    <wsdl:operation name="novaRegistracija">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistracijaCRUDService/novaRegistracija" message="tns:IRegistracijaCRUDService_novaRegistracija_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistracijaCRUDService/novaRegistracijaResponse" message="tns:IRegistracijaCRUDService_novaRegistracija_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uredivanjePodataka">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistracijaCRUDService/uredivanjePodataka" message="tns:IRegistracijaCRUDService_uredivanjePodataka_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistracijaCRUDService/uredivanjePodatakaResponse" message="tns:IRegistracijaCRUDService_uredivanjePodataka_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="prijava">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistracijaCRUDService/prijava" message="tns:IRegistracijaCRUDService_prijava_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistracijaCRUDService/prijavaResponse" message="tns:IRegistracijaCRUDService_prijava_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gostID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistracijaCRUDService/gostID" message="tns:IRegistracijaCRUDService_gostID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistracijaCRUDService/gostIDResponse" message="tns:IRegistracijaCRUDService_gostID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRegistracijaCRUDService" type="tns:IRegistracijaCRUDService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="novaRegistracija">
+      <soap:operation soapAction="http://tempuri.org/IRegistracijaCRUDService/novaRegistracija" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uredivanjePodataka">
+      <soap:operation soapAction="http://tempuri.org/IRegistracijaCRUDService/uredivanjePodataka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="prijava">
+      <soap:operation soapAction="http://tempuri.org/IRegistracijaCRUDService/prijava" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gostID">
+      <soap:operation soapAction="http://tempuri.org/IRegistracijaCRUDService/gostID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RegistracijaCRUDService">
+    <wsdl:port name="BasicHttpBinding_IRegistracijaCRUDService" binding="tns:BasicHttpBinding_IRegistracijaCRUDService">
+      <soap:address location="http://localhost:53563/RegistracijaCRUDService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

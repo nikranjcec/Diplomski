@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b17cf375-a62e-450b-bfb5-b02a4a2b49a9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53563/ApartmaniCRUDService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ApartmaniCRUDService.xsd" MetadataType="Schema" ID="bf724c18-edd3-4502-938d-6ef47a11f1e4" SourceId="1" SourceUrl="http://localhost:53563/ApartmaniCRUDService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ApartmaniCRUDService1.xsd" MetadataType="Schema" ID="9e7d3761-203a-4e5b-92ab-f9bdabdb23c8" SourceId="1" SourceUrl="http://localhost:53563/ApartmaniCRUDService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ApartmaniCRUDService2.xsd" MetadataType="Schema" ID="7e232ba9-f6be-4b18-88f7-538e763c86da" SourceId="1" SourceUrl="http://localhost:53563/ApartmaniCRUDService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ApartmaniCRUDService.disco" MetadataType="Disco" ID="cd4c450a-d196-4c40-ad96-4085de7c395d" SourceId="1" SourceUrl="http://localhost:53563/ApartmaniCRUDService.svc?disco" />
+    <MetadataFile FileName="ApartmaniCRUDService.wsdl" MetadataType="Wsdl" ID="584025a1-eaff-44bc-9fd0-f1e160828d34" SourceId="1" SourceUrl="http://localhost:53563/ApartmaniCRUDService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

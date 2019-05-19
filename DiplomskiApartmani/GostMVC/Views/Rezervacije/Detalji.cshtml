@@ -1,0 +1,31 @@
+﻿@model ApartmaniService.DTO.ApartmanDTO
+
+<h2>Detalji rezervacije</h2>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Grad, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Grad, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Adresa, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Adresa, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.BrojOsoba, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.BrojOsoba, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Povrsina, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Povrsina, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+</div>

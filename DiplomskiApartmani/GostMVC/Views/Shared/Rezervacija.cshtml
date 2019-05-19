@@ -1,0 +1,66 @@
+﻿@model GostMVC.Models.RezervacijaViewModel
+
+@{
+    ViewBag.Title = "Nova rezervacija";
+}
+
+<h2>Nova rezervacija</h2>
+
+<div>
+    @if (!String.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        @Html.TextAreaFor(m => m.ErrorMessage, new { @class = "text-danger" })
+    }
+</div>
+
+@using (Html.BeginForm("Spremi", "Apartmani")) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @if (Model.ApartmanID != 0)
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.ApartmanID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.ApartmanID, Model.listaApartmana, "-Odaberite apartman-", new { @class = "form-control", @disabled = "disabled" })
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.ApartmanID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.ApartmanID, Model.listaApartmana, "-Odaberite apartman-", new { @class = "form-control"})
+            </div>
+        </div>
+    }
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Od, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Od, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Od, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Do, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Do, new { htmlAttributes = new { @class = "form-control datepicker" } })
+            @Html.ValidationMessageFor(model => model.Do, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Rezerviraj" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ApartmaniService.DTO.RezervacijaDTO>
+
+@{
+    ViewBag.Title = "Pregled rezervacija";
+}
+<script src="@Url.Content("~/Scripts/jquery-3.3.1.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+
+<h2>Pregled rezervacija</h2>
+
+<p>
+    @Html.ActionLink("Nova rezervacija", "Nova", false)
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NazivApartmana)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Od)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Do)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NazivApartmana)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Od)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Do)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+
+            <td>
+                @Ajax.ActionLink("Detalji", "Detalji", "Rezervacije", new {id = item.ApartmanID},
+                       new AjaxOptions() {
+                           HttpMethod = "GET",
+                           UpdateTargetId = "Display",
+                           InsertionMode = InsertionMode.Replace
+                       }) |
+                @Html.ActionLink("Otkaži", "Otkazi", new { id = item.RezervacijaID })
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+<div id="Display">
+
+</div>

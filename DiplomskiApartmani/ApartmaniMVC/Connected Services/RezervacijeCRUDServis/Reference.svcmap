@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9561fa69-6041-4d5d-920e-85d1ea7601d6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53563/RezervacijeCRUDService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RezervacijeCRUDService.disco" MetadataType="Disco" ID="85caad8e-3bb2-40b4-95b0-95646f874b62" SourceId="1" SourceUrl="http://localhost:53563/RezervacijeCRUDService.svc?disco" />
+    <MetadataFile FileName="RezervacijeCRUDService.xsd" MetadataType="Schema" ID="1dac4e05-0d4a-4e85-b59e-239a4ed4611a" SourceId="1" SourceUrl="http://localhost:53563/RezervacijeCRUDService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RezervacijeCRUDService.wsdl" MetadataType="Wsdl" ID="c0f5e60f-0d97-4f1a-a78a-70f44ce7e094" SourceId="1" SourceUrl="http://localhost:53563/RezervacijeCRUDService.svc?wsdl" />
+    <MetadataFile FileName="RezervacijeCRUDService1.xsd" MetadataType="Schema" ID="abde245e-4069-4ef0-b34b-df3758f871be" SourceId="1" SourceUrl="http://localhost:53563/RezervacijeCRUDService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RezervacijeCRUDService2.xsd" MetadataType="Schema" ID="2be0881f-7f01-4abe-8780-2c71e2e062cc" SourceId="1" SourceUrl="http://localhost:53563/RezervacijeCRUDService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

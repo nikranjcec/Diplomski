@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Session["GostID"] != null)
+{
+    @*using (Html.BeginForm("LogOff", "Gost", FormMethod.Post))
+        {
+        @Html.AntiForgeryToken()*@
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("Hello " + Session["Email"] + "!", "Uredi", "Gost", new { GostID = Session["GostID"] }, false)
+        </li>
+
+        <li>
+            @Html.ActionLink("Log off", "LogOff", "Gost", new { GostID = Session["GostID"] }, false)
+        </li>
+        @*<li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
+    </ul>
+    //}
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Registriraj se", "Novi", "Gost")</li>
+        <li>@Html.ActionLink("Log in", "Prijava", "Gost")</li>
+    </ul>
+}
